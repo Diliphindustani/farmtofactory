@@ -1,5 +1,6 @@
 {
-  "name": "khet-market",
+  "name": "farm2factory",
+  "short_name": "FarmTofactory",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

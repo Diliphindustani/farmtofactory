@@ -1,0 +1,47 @@
+[debug] [2024-10-21T07:41:00.857Z] ----------------------------------------------------------------------
+[debug] [2024-10-21T07:41:00.861Z] Command:       X:\node.exe C:\Users\dilip\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2024-10-21T07:41:00.862Z] CLI Version:   13.22.1
+[debug] [2024-10-21T07:41:00.862Z] Platform:      win32
+[debug] [2024-10-21T07:41:00.862Z] Node Version:  v20.17.0
+[debug] [2024-10-21T07:41:00.862Z] Time:          Mon Oct 21 2024 13:11:00 GMT+0530 (India Standard Time)
+[debug] [2024-10-21T07:41:00.863Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-10-21T07:41:00.978Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-10-21T07:41:00.979Z] > authorizing via signed-in user (dilipk82003@gmail.com)
+[debug] [2024-10-21T07:41:00.979Z] [iam] checking project khet-market for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-10-21T07:41:00.981Z] Checked if tokens are valid: true, expires at: 1729499561534
+[debug] [2024-10-21T07:41:00.982Z] Checked if tokens are valid: true, expires at: 1729499561534
+[debug] [2024-10-21T07:41:00.984Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/khet-market:testIamPermissions [none]
+[debug] [2024-10-21T07:41:00.984Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/khet-market:testIamPermissions x-goog-quota-user=projects/khet-market
+[debug] [2024-10-21T07:41:00.985Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/khet-market:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-10-21T07:41:03.173Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/khet-market:testIamPermissions 200
+[debug] [2024-10-21T07:41:03.174Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/khet-market:testIamPermissions {}
+[debug] [2024-10-21T07:41:03.174Z] [iam] error while checking permissions, command may fail: FirebaseError: Authorization failed. This account is missing the following required permissions on project khet-market:
+
+  cloudfunctions.functions.create
+  cloudfunctions.functions.delete
+  cloudfunctions.functions.get
+  cloudfunctions.functions.list
+  cloudfunctions.functions.update
+  cloudfunctions.operations.get
+  firebase.projects.get
+  firebasehosting.sites.update
+[debug] [2024-10-21T07:41:03.174Z] Checked if tokens are valid: true, expires at: 1729499561534
+[debug] [2024-10-21T07:41:03.174Z] Checked if tokens are valid: true, expires at: 1729499561534
+[debug] [2024-10-21T07:41:03.175Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/khet-market/serviceAccounts/khet-market@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2024-10-21T07:41:03.175Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/khet-market/serviceAccounts/khet-market@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2024-10-21T07:41:05.143Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/khet-market/serviceAccounts/khet-market@appspot.gserviceaccount.com:testIamPermissions 404
+[debug] [2024-10-21T07:41:05.143Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/khet-market/serviceAccounts/khet-market@appspot.gserviceaccount.com:testIamPermissions {"error":{"code":404,"message":"Unknown service account","status":"NOT_FOUND"}}
+[debug] [2024-10-21T07:41:05.144Z] [functions] service account IAM check errored, deploy may fail: HTTP Error: 404, Unknown service account {"name":"FirebaseError","children":[],"context":{"body":{"error":{"code":404,"message":"Unknown service account","status":"NOT_FOUND"}},"response":{"statusCode":404}},"exit":1,"message":"HTTP Error: 404, Unknown service account","status":404}
+[debug] [2024-10-21T07:41:05.145Z] Checked if tokens are valid: true, expires at: 1729499561534
+[debug] [2024-10-21T07:41:05.145Z] Checked if tokens are valid: true, expires at: 1729499561534
+[debug] [2024-10-21T07:41:05.146Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/khet-market [none]
+[debug] [2024-10-21T07:41:05.866Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/khet-market 403
+[debug] [2024-10-21T07:41:05.867Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/khet-market {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2024-10-21T07:41:05.867Z] HTTP Error: 403, The caller does not have permission
+[debug] [2024-10-21T07:41:05.868Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at responseToError (C:\Users\dilip\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:49:12)
+    at RetryOperation._fn (C:\Users\dilip\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:312:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to get Firebase project khet-market. Please make sure the project exists and your account has permission to access it.
